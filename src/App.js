@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-  const value = 'Booboo baya';
+  const value = "Booboo";
   return <div>Hello {value}</div>;
 }
 
