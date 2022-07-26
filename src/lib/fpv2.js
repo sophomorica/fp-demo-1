@@ -1,4 +1,3 @@
-"use strict";
 var __assign =
   (this && this.__assign) ||
   function () {
@@ -103,7 +102,7 @@ var Footprint = (function () {
         tag = tag.trim().substr(0, MAX_TAG_LENGTH);
       }
       var localProtocol =
-        window.location.protocol == "file:"
+        window.location.protocol === "file:"
           ? "https://"
           : window.location.protocol + "//";
       // Give up on this measurement if the browser does not support the JSON or XMLHttpRequest module.
