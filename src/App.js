@@ -1,8 +1,10 @@
 import React from "react";
+import FootprintDemo from './components/FootprintDemo'
 
 function App() {
-  const value = "changed name";
-  return <div>Hello {value}</div>;
+  return (
+    <FootprintDemo />
+  )
 }
 
 export default App;
