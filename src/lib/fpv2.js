@@ -29,7 +29,7 @@ var Footprint = (function () {
   var XHR_FETCH_FLAGS = XHR_FETCH_HTTPS_FLAG | XHR_FETCH_HTTP_FLAG;
   var FETCH_FLAGS = IMG_FETCH_FLAGS | XHR_FETCH_FLAGS;
   var HTTP_PROT = "http://"; // identifies the HTTP scheme
-  var HTTPS_PROT = "https://"; // identifies the HTTPS scheme
+  // var HTTPS_PROT = "https://"; // identifies the HTTPS scheme
   var MAX_TAG_LENGTH = 200; // 200 characters is defined in the FPv1 spec as the maximum tag length.
   var WARMUP_IMG = "trans.gif"; // 1x1 image used for DNS warmup
   var MEASUREMENT_OBJ_PATH = "/apc/"; // fetch remote images from this path
@@ -275,14 +275,14 @@ var Footprint = (function () {
       }
       totalWeight -= randomItem.weight; // subtract the weight of the selected item from the total
       var guid = randomItem.endpoint.charAt(0) === "*" ? probeId() : ""; // generate a new guid for each endpoint that has a wildcard
-      for (var i = 0; i < acceptedFlags.length; i++) {
-        if (randomItem.measurementTypes & acceptedFlags[i]) {
+      for (var n = 0; n < acceptedFlags.length; n++) {
+        if (randomItem.measurementTypes & acceptedFlags[n]) {
           config.push({
             id: randomItem.endpoint,
-            testImage: testImages[i],
-            measurementType: acceptedFlags[i],
+            testImage: testImages[n],
+            measurementType: acceptedFlags[n],
             guid: guid,
-            rank: ranks[i],
+            rank: ranks[n],
           });
         }
       }
