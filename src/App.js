@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
+import FootprintDemo from "./components/FootprintDemo";
 
 function App() {
-  const value = 'World';
-  return <div>Hello {value}</div>;
+  return <FootprintDemo />;
 }
 
 export default App;
